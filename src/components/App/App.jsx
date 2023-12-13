@@ -31,7 +31,7 @@ export const App = () => {
   };
 
   const onDeleteContact = id => {
-    setContacts(contacts.filter(el => el.id !== id));
+    setContacts(prevState => prevState.filter(el => el.id !== id));
   };
 
   const handleSetSearch = event => {
